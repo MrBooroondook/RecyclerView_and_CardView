@@ -2,6 +2,7 @@ package mr.booroondook.recyclerview_and_cardview;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
 
 public abstract class RecyclerViewActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -15,7 +16,7 @@ public abstract class RecyclerViewActivity extends AppCompatActivity {
         return(recyclerView);
     }
 
-    void setAdapter(RecyclerView.Adapter adapter) {
+    void setAdapter(@SuppressWarnings("rawtypes") Adapter adapter) {
         getRecyclerView().setAdapter(adapter);
     }
 
